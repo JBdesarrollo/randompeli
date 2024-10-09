@@ -70,7 +70,7 @@ function displayMovieData(movie) {
     document.getElementById('movie-genres').innerHTML = Array.isArray(movie.genres) ? movie.genres.map(genre => genre.name).join(', ') : 'Géneros no disponibles';
     document.getElementById('movie-origin-country').innerHTML = Array.isArray(movie.production_countries) ? movie.production_countries.map(country => country.name).join(', ') : 'Países no disponibles';
     document.getElementById('movie-original-language').innerHTML = movie.original_language || 'Idioma no disponible';
-    document.getElementById('movie-poster').src = movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : 'ruta/imagen/no_disponible.jpg'; // Imagen por defecto si no hay poster
+    document.getElementById('movie-poster').src = movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : '/default.webp'; // Imagen por defecto si no hay poster
     document.getElementById('movie-card').style.display = 'block'; // Mostrar tarjeta de película
     document.getElementById('search-input').value = '';
 }
