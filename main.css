@@ -1,7 +1,9 @@
-body {
+html, body {
     background-color: #222;
     color: #fff;
     font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
 }
 h2 {
     margin-top: .8rem;
@@ -44,9 +46,39 @@ h2 {
 #search-input{
     margin-top: .8rem;
 }
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrar horizontalmente */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Sombra opcional para darle profundidad */
+}
 
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: .5rem; /* Espacio entre el ícono y el texto */
+}
+
+#icon {
+    height: 2rem;
+}
 @media (max-width: 768px) {
     .movie-card {
         width: 90%;
     }
+    footer{
+        margin-top: 20px;
+        position: relative;
+    }
+    footer a {
+        font-size: 1rem;
+    }
 }
+
+
