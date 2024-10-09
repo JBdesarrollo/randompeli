@@ -41,6 +41,10 @@ h2 {
 .suggestion-item:hover {
     background-color: #555;
 }
+#search-input{
+    margin-top: .8rem;
+}
+
 @media (max-width: 768px) {
     .movie-card {
         width: 90%;

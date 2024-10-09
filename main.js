@@ -28,18 +28,6 @@ async function fetchRandomMovie() {
 // Llamar a la función para obtener una película aleatoria al iniciar
 fetchRandomMovie();
 
-
-// También agregar evento para cuando se presiona "Enter"
-document.getElementById('search-input').addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        const query = e.target.value;
-        if (query) {
-            fetchMovieByTitle(query);
-        }
-    }
-});
-
-// Función para buscar película por título
 // Función para buscar película por título
 async function fetchMovieByTitle(title) {
     document.getElementById('loading').style.display = 'flex'; // Mostrar pantalla de carga
@@ -107,7 +95,7 @@ function getStarRating(vote) {
     return '⭐'.repeat(stars) + '☆'.repeat(5 - stars); // Generar cadena de estrellas
 }
 
-// Agregar evento para mostrar sugerencias
+// Agregar evento para mostrar sugerencias a medida que teclean
 document.getElementById('search-input').addEventListener('input', async (e) => {
     const query = e.target.value;
     if (query.length > 0) {
