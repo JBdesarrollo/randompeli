@@ -63,7 +63,7 @@ function displayMovieData(movie) {
     document.getElementById('movie-title').innerHTML = movie.title || 'Título no disponible';
     document.getElementById('movie-overview').innerHTML = movie.overview || 'Descripción no disponible';
     document.getElementById('movie-release-date').innerHTML = movie.release_date || 'Fecha no disponible';
-    document.getElementById('movie-rating').innerHTML = movie.vote_average || 'Calificación no disponible';
+    document.getElementById('movie-rating').innerHTML = Math.round(movie.vote_average/2) || 'Calificación no disponible';
     document.getElementById('star-rating').innerHTML = getStarRating(movie.vote_average || 0);
 
     // Asegurarse de que genres y production_countries sean arreglos antes de intentar mapear
