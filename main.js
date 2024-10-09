@@ -1,24 +1,23 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+//const apiKey = import.meta.env.VITE_API; // Obtener la clave de API de TMDB
+const apiKey = import.meta.env.API; // Obtener la clave de API de TMDB
 
-setupCounter(document.querySelector('#counter'))
+const movieId = '550'; // Reemplaza con el ID de la película que deseas obtener
+
+console.log(import.meta.env);
+async function fetchMovieData() {
+    try {
+        const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=es-ES`);
+        if (!response.ok) {
+            throw new Error(`Error: ${response.status}`);
+        }
+        const movieData = await response.json();
+        console.log(movieData);
+        // Aquí puedes procesar y mostrar la información de la película en tu aplicación
+    } catch (error) {
+        console.error('Error al obtener la información de la película:', error);
+    }
+}
+
+// Llama a la función para hacer el fetch
+fetchMovieData();
