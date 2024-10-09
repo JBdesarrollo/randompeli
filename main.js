@@ -1,6 +1,6 @@
 
-//const apiKey = import.meta.env.VITE_API; // Obtener la clave de API de TMDB
-const apiKey = import.meta.env.API; // Obtener la clave de API de TMDB
+const apiKey = import.meta.env.VITE_API; // Obtener la clave de API de TMDB
+//const apiKey = import.meta.env.API; // Obtener la clave de API de TMDB
 
 const movieId = '550'; // Reemplaza con el ID de la película que deseas obtener
 
