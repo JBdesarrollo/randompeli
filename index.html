@@ -1,13 +1,50 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Una peli al día</title>
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+  <title>Random Movie</title>
+  <style>
 
-    <script type="module" src="/main.js"></script>
-  </body>
+  </style>
+</head>
+<body>
+
+<div class="loading-screen" id="loading">
+  <h1>Cargando película...</h1>
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Cargando...</span>
+  </div>
+</div>
+
+<div class="container movie-card" id="movie-card">
+  <div class="row">
+    <div class="col-md-6">
+      <img id="movie-poster" src="" alt="Poster de la película" class="img-fluid">
+    </div>
+    <div class="col-md-6">
+      <h2 id="movie-title"></h2>
+      <p id="movie-overview"></p>
+      <p><strong>Fecha de lanzamiento:</strong> <span id="movie-release-date"></span></p>
+      <p><strong>Calificación:</strong> <span id="movie-rating"></span> <span id="star-rating" class="star-rating"></span></p>
+      <p><strong>Géneros:</strong> <span id="movie-genres"></span></p>
+      <p><strong>País de origen:</strong> <span id="movie-origin-country"></span></p>
+      <p><strong>Idioma original:</strong> <span id="movie-original-language"></span></p>
+    </div>
+  </div>
+  <!-- Campo de búsqueda -->
+  <div class="container col-md-6">
+    <div class="input-group">
+      <input type="text" class="form-control" id="search-input" placeholder="Buscar película...">
+    </div>
+    <div id="suggestions" class="mt-2"></div> <!-- Sugerencias -->
+  </div>
+</div>
+
+
+
+<script type="module" src="main.js"></script>
+</body>
 </html>

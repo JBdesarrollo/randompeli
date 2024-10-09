@@ -1,0 +1,48 @@
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+h2 {
+    margin-top: .8rem;
+}
+.loading-screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.movie-card {
+    display: none;
+    margin: 0 auto;
+    width: 40%;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #333;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+#movie-poster {
+    border-radius: 10px;
+}
+.star-rating {
+    color: #FFD700; /* Color dorado para las estrellas */
+}
+.suggestion-item {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.suggestion-item:hover {
+    background-color: #555;
+}
+@media (max-width: 768px) {
+    .movie-card {
+        width: 90%;
+    }
+}
