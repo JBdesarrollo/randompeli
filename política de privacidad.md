@@ -1,0 +1,3 @@
+"Una Peli al día" es una aplicación de entretenimiento creada para probar tecnologías con las que no había programado antes.
+Por tanto no recoge ningún tipo de información de los usuarios, no almacena localmente ningún tipo de información (ni en forma de cookies ni variables de sión o locales).
+De igual manera la aplicación no requiere ningún tipo de permisos para acceder ni recopila ningún tipo de información y por tanto no envía información ni al desarrollador de la app ni a terceros.
